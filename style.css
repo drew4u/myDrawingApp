@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+body {
+	margin: 0;
+	padding:  0;
+	font-family: Arial, Helvetica, sans-serif;
+	background-image: url(img/paper.jpg);
+}
+
+p {
+	color: black;
+	font-family: 'Dosis', sans-serif;
+	font-size: 20px;
+}
+
+h3 {
+    color: black;
+    font-family: 'bangers';
+    font-kerning: 4s;
+}
+
+.title {
+	color: black;
+	font-family: 'Bangers', cursive;
+}
+
+.brushSlider {
+    margin-top: 8px;
+}
+
+.brushSize {
+	color: black;
+	font-family: 'bangers';
+}
+
+.changeSize {
+    font-family: 'bangers' !important;
+    margin-left: 8px;
+}
+
+#drawingcontainer {
+	width: 800px;
+	margin: 0px auto;
+}
+
+#drawingcontainer div {
+	padding: 15px;
+	line-height: 30px;
+}
+
+#drawingcontainer .text {
+	text-align: center;
+	width: 100%;
+	font-size: 50px;
+	padding: 40px 0;
+}
+
+.toolbar {
+    background-color: rgba(0,0,0,0.2) !important;
+}
+
+#options {
+	float: left;
+}
+
+#options input[type=submit] {
+	border: 0;
+	margin-right: 10px;
+	width: 35px;
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.2);
+	height: 35px;
+	position: relative;
+	cursor: pointer;
+}
+
+#options input[type=submit]:hover {
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+#options input[type=submit]:active {
+	top: 2px;
+}
+
+.purple { background: #871de0; }
+.pink { background: #eb159d; }
+.red { background: #c92626; }
+.orange { background: #db551b; }
+.yellow { background: #ddc41e; }
+.green { background: #76b80f; }
+.blue { background: #1974b4; }
+.black { background: #000; }
+.white { background: #fff; }
+
+#shapes {
+	float: left;
+}
+
+#shapes input[type=submit] {
+	margin-right: 10px;
+	width: 35px;
+	height: 35px;
+	position: relative;
+	cursor: pointer;
+	background:white;
+	border: 2px solid black;
+	font-size: 8px;
+}
+
+#shapes input[type=submit]:hover {
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+#shapes input[type=submit]:active {
+	top: 2px;
+}
+
+.circle
+{
+	border-radius: 18px; 
+}
+
+.imageBrush {
+    margin-bottom: 10px;
+}
+
+.clearBtn {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+	width: 76px !important;
+	border: 2px solid black;
+	border-radius: 10px;
+	padding: 6px;
+	width: 100px;
+	font-family: 'bangers';
+    background-color: rgba(0,0,0,0.1);
+}
+
+.clearBtn {
+    box-shadow: 0px 2px 20px #000000;
+}
+
+.backgrounds {
+    margin-top: 15px;
+}
+
+.canvas1 {
+	box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
+	clear:both;
+	background-image: none;
+	border-radius: 0px;
+	display: block;
+}
+
+.canvas2 {
+	box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
+	clear:both;
+	background-image: url(img/mountains.jpg);
+    background-size: 800px 400px;
+    background-repeat: no-repeat;
+	border-radius: 0px;
+	display: block;
+}
+
+.canvas4 {
+	box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
+	clear:both;
+	background-image: url(img/street.jpg);
+    background-size: 800px 400px;
+    background-repeat: no-repeat;
+	border-radius: 0px;
+	display: block;
+}
+
+.canvas5 {
+	box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
+	clear:both;
+	background-image: url(img/space.jpg);
+    background-size: 800px 400px;
+    background-repeat: no-repeat;
+	border-radius: 0px;
+	display: block;
+}
+
+/* reference for css styling 
+http://www.inserthtml.com/2012/05/html5-canvas-interactivity/
+*/

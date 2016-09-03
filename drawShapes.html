@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Andrews Drawing App</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Dosis|Bangers' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<div id="drawingcontainer">
+	<div class="text title">Drews Drawing App</div>
+    <!-- this contains the various color choices -->
+    <div class="toolbar">
+        <div id="options">
+            <input type="submit" onclick="setColor('#871de0');" class="purple" value="" />
+            <input type="submit" onclick="setColor('#eb159d');" class="pink" value="" />
+            <input type="submit" onclick="setColor('#c92626');" class="red" value="" />
+            <input type="submit" onclick="setColor('#db551b');" class="orange" value="" />
+            <input type="submit" onclick="setColor('#ddc41e');" class="yellow" value="" />
+            <input type="submit" onclick="setColor('#76b80f');" class="green" value="" />
+            <input type="submit" onclick="setColor('#1974b4');" class="blue" value="" />
+            <input type="submit" onclick="setColor('#000');" class="black" value="" />
+            <input type="submit" onclick="setColor('#FFF');" class="white" value="" />
+        </div>
+    <!-- this contains the various color choices -->
+    
+        <div id = "shapes">
+            <input type="image" src="img/squareShape.png" alt="Submit" id="square" height="60" width="60" onclick="setShape('square')">
+            <input type="image" src="img/circleShape.png" alt="Submit" id="circle" height="60" width="60" onclick="setShape('square')">
+            <input type="image" src="img/triangleShape.png" alt="Submit" id="triangle" height="60" width="60" onclick="setShape('triangle')">
+            <input type="image" src="img/diamondShape.png" alt="Submit" id="diamond" height="60" width="60" onclick="setShape('diamond')">
+            <input type="image" src="img/boltShape.png" alt="Submit" id="bolt" height="60" width="60" onclick="setShape('bolt')">
+            <input type="image" src="img/lineShape.png" alt="Submit" id="line" height="60" width="60" onclick="setShape('line')">
+            <input type="image" src="img/cat.png" alt="Submit" class="imageBrush" id="catBrush" height="40" width="40" onclick="setShape('cat')">
+            <input type="image" src="img/elephant.png" alt="Submit" class="imageBrush" id="elephantBrush" height="40" width="40" onclick="setShape('elephant')">
+            <input type="image" src="img/poop.png" alt="Submit" class="imageBrush" id="poopBrush" height="40" width="40" onclick="setShape('poop')">
+        </div>
+
+        <div class="brushSlider">
+            <input type="range" min="0" max="80" value="40" onchange="showValue(this.value)"/>
+            <span class="brushSize">Brush size :</span> 
+            <span class="brushSize" id="brushSize">40</span>
+            <input type="button" onclick="changeSize()" class="changeSize" id="changeSize" value="Apply"/>
+        </div>
+        
+        <div class="backgrounds">
+            <input type="image" src="img/paper.jpg" alt="Submit" id="paper" height="40" width="40" onclick="background('canvas1')">
+            <input type="image" src="img/mountains.jpg" alt="Submit" id="mountain" height="40" width="40" onclick="background('canvas2')">
+            <!--<input type="image" src="img/treeBg.jpg" alt="Submit" id="tree" height="40" width="40" onclick="background('canvas3')">-->
+            <input type="image" src="img/street.jpg" alt="Submit" id="street" height="40" width="40" onclick="background('canvas4')">
+            <input type="image" src="img/space.jpg" alt="Submit" id="space" height="40" width="40" onclick="background('canvas5')">
+        </div>
+    </div>
+    
+    <canvas class="canvas1" width="800" height="400" id="drawing">
+	Your browser doesn't support canvas
+	</canvas>
+    
+    <input type="submit" onclick="init();" class="clearBtn" value="Clear Screen"/>
+    
+    <div id = "info">
+    	 <p>Instructions: Hold the mouse down to draw. Click on the color swatches to change color. Click on the shapes to change drawing shapes. Change the background by clicking the image you would like to use.<p>
+      
+         <!-- put your assignment information here -->
+   		 <p>Assignment 2: Interactive Canvas App, 
+   		   Name: Andrew Sibert ID: 001681847</p>
+    </div>
+    
+</div>
+<script src="raf.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
